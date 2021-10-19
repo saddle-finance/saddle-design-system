@@ -15,7 +15,7 @@ An open source Design System / React Component Library for Saddle projects
 ```
 4. Add project to your package.json file as a dependency:
 ```
-"@saddle-finance/saddle-design-system": "<RELEASE_TAG_HERE",
+"@saddle-finance/saddle-design-system": "<RELEASE_TAG_HERE>",
 ```
 
 ## Development
