@@ -9,7 +9,7 @@ interface TextProps {
   size?: "sm" | "md" | "lg"
 }
 
-const variants = variant({
+const sizes = variant({
   prop: "size",
   variants: {
     sm: {
@@ -28,9 +28,9 @@ const variants = variant({
 })
 
 // Compose all typography styles w/ our variants if we prefer
-// const textStyles = compose(typography, variants)
+// const textStyles = compose(typography, sizes)
 // const Text = styled.span<TextProps>(textStyles)
-const Text = styled.span<TextProps>(variants)
+const Text = styled.span<TextProps>(sizes)
 
 Text.defaultProps = {
   size: "md"

@@ -4,5 +4,9 @@ export default {
   fonts: {
     serif: "serif",
     sansSerif: "sans-serif"
+  },
+  colors: {
+    primary: '#07c',
+    secondary: '#0fa',
   }
 }
