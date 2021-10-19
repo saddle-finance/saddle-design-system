@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "@types/react": "^17.0.30",
+    "@types/styled-system": "^5.1.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "styled-components": "^5.3.1"
+    "styled-components": "^5.3.1",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",

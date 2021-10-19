@@ -1,12 +1,11 @@
-// TODO: replace with styled-components
-// import "../styles/global.scss"
-
 import React, { ReactElement } from "react"
+import { ThemeProvider } from 'styled-components'
 
+import base from "../themes/base"
 import Text from "../components/Text"
 
 export const TextStory = (): ReactElement => (
-  <>
+  <ThemeProvider theme={base}>
     <div>
       <Text size="lg">Large Text</Text>
     </div>
@@ -16,7 +15,7 @@ export const TextStory = (): ReactElement => (
     <div>
       <Text size="sm">Small Text</Text>
     </div>
-  </>
+  </ThemeProvider>
 )
 
 export default {
