@@ -1,7 +1,11 @@
 import styled from "styled-components"
 import { variant, compose, typography, TypographyProps } from "styled-system"
 
-interface TextProps extends TypographyProps {
+// NB: We can include all Typography props if we prefer
+// interface TextProps extends TypographyProps {
+//   size?: "sm" | "md" | "lg"
+// }
+interface TextProps {
   size?: "sm" | "md" | "lg"
 }
 
@@ -23,15 +27,16 @@ const variants = variant({
   }
 })
 
-const textStyles = compose(typography, variants)
-
-const Text = styled.span<TextProps>(textStyles)
+// Compose all typography styles w/ our variants if we prefer
+// const textStyles = compose(typography, variants)
+// const Text = styled.span<TextProps>(textStyles)
+const Text = styled.span<TextProps>(variants)
 
 Text.defaultProps = {
   size: "md"
 }
 
-// NB: We can forgo the "variants" like so:
+// NB: OR we can also forgo the "variants" like so:
 // const Text = styled.span<TypographyProps>`
 //   ${typography}
 // `
@@ -41,3 +46,4 @@ Text.defaultProps = {
 // }
 
 export default Text
+export type { TextProps }
