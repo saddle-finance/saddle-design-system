@@ -2,7 +2,6 @@
   "name": "@saddle-finance/saddle-design-system",
   "description": "The Design System and Component Library for saddle.finance 🤠",
   "version": "0.1.0",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/saddle-finance/saddle-design-system"
