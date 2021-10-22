@@ -1,8 +1,11 @@
 {
-  "name": "saddle-design-system",
+  "name": "@saddle-finance/saddle-design-system",
   "description": "The Design System and Component Library for saddle.finance 🤠",
   "version": "0.1.0",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saddle-finance/saddle-design-system"
+  },
   "dependencies": {
     "@types/react": "^17.0.30",
     "react": "^17.0.2",
@@ -27,10 +30,13 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "node-sass": "^6.0.1",
+    "postcss": "^8.3.9",
     "rollup": "^2.58.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.1",
-    "rollup-plugin-typescript2": "^0.30.0"
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4"
   },
   "peerDependencies": {
     "postcss": "^8.3.9",
@@ -42,7 +48,13 @@
     "build-storybook": "build-storybook -s public --no-dll",
     "build": "rollup -c"
   },
+  "files": [
+    "/lib"
+  ],
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/saddle-finance"
+  }
 }
