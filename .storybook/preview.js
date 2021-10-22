@@ -1,7 +1,7 @@
-import React from "react"
-import { ThemeProvider } from 'styled-components'
+/** @jsxImportSource theme-ui */
+import { ThemeProvider } from 'theme-ui'
 
-import base from "../src/themes/base"
+import theme from "../src/themes/theme"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -15,7 +15,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={base}>
+    <ThemeProvider theme={theme}>
       <Story />
     </ThemeProvider>
   ),

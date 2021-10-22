@@ -1,44 +1,22 @@
-import styled from "styled-components"
-import { variant, system, compose } from "styled-system"
+/** @jsxImportSource theme-ui */
+import { ReactChild } from 'react'
+import { Button as _Button, useThemeUI, get } from 'theme-ui'
 
 type Kind = "primary" | "secondary"
 type Size = "sm" | "md" | "lg"
 interface ButtonProps {
   kind?: Kind,
-  size?: Size
+  size?: Size,
+  children: ReactChild
 }
 
-const kinds = variant({
-  prop: "kind",
-  variants: {
-    primary: {
-      bg: 'primary'
-    },
-    secondary: {
-      bg: 'secondary'
-    }
-  }
-})
+const Button = ({ size, kind, children }: ButtonProps) => {
+  const context = useThemeUI()
+  const sizes = get(context.theme, `button.${size}`)
+  const kinds = get(context.theme, `button.${kind}`)
 
-const sizes = variant({
-  prop: "size",
-  variants: {
-    sm: {
-      fontSize: 0
-    },
-    md: {
-      fontSize: 1
-    },
-    lg: {
-      fontSize: 2
-    },
-  }
-})
-
-const Button = styled.button<ButtonProps>(
-  kinds,
-  sizes
-)
+  return <_Button sx={{ ...sizes, ...kinds }}>{ children }</_Button>
+}
 
 Button.defaultProps = {
   kind: "primary",

@@ -1,7 +1,6 @@
-import React from "react"
+/** @jsxImportSource theme-ui */
 import { Story, Meta } from "@storybook/react"
 
-import base from "../themes/base"
 import Button, { ButtonProps } from "../components/Button"
 
 export default {

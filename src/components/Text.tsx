@@ -1,49 +1,23 @@
-import styled from "styled-components"
-import { variant, compose, typography, TypographyProps } from "styled-system"
+/** @jsxImportSource theme-ui */
+import { ReactChild } from 'react'
+import { Text as _Text, useThemeUI, get } from 'theme-ui'
 
-// NB: We can include all Typography props if we prefer
-// interface TextProps extends TypographyProps {
-//   size?: "sm" | "md" | "lg"
-// }
+// TODO: Import Typography props as well?  Or merge sx object?
 interface TextProps {
-  size?: "sm" | "md" | "lg"
+  size?: "sm" | "md" | "lg",
+  children: ReactChild
 }
 
-const sizes = variant({
-  prop: "size",
-  variants: {
-    sm: {
-      fontSize: 0,
-      lineHeight: 0
-    },
-    md: {
-      fontSize: 1,
-      lineHeight: 1
-    },
-    lg: {
-      fontSize: 2,
-      lineHeight: 2
-    },
-  }
-})
+const Text = ({ size, children }: TextProps) => {
+  const context = useThemeUI()
+  const styles = get(context.theme, `text.${size}`)
 
-// Compose all typography styles w/ our variants if we prefer
-// const textStyles = compose(typography, sizes)
-// const Text = styled.span<TextProps>(textStyles)
-const Text = styled.span<TextProps>(sizes)
+  return <_Text sx={styles}>{ children }</_Text>
+}
 
 Text.defaultProps = {
   size: "md"
 }
-
-// NB: OR we can also forgo the "variants" like so:
-// const Text = styled.span<TypographyProps>`
-//   ${typography}
-// `
-// Text.defaultProps = {
-//   fontFamily: "sansSerif",
-//   fontSize: 1
-// }
 
 export default Text
 export type { TextProps }
