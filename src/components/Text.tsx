@@ -8,15 +8,11 @@ interface TextProps {
   children: ReactChild
 }
 
-const Text = ({ size, children }: TextProps) => {
+const Text = ({ size = "md", children }: TextProps) => {
   const context = useThemeUI()
   const styles = get(context.theme, `text.${size}`)
 
   return <_Text sx={styles}>{ children }</_Text>
-}
-
-Text.defaultProps = {
-  size: "md"
 }
 
 export default Text
