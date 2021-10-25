@@ -22,7 +22,8 @@
     "noEmit": true,
     "jsx": "react",
     "downlevelIteration": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "types": ["@emotion/core"]
   },
   "include": [
     "src"

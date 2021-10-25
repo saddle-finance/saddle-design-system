@@ -4,7 +4,11 @@ import base from './base'
 import text from './text'
 import button from './button'
 
-const theme: Theme = {
+interface ThemeWithVariants extends Theme {
+  text: any
+}
+
+const theme: ThemeWithVariants = {
   ...base,
   ...text,
   ...button

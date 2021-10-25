@@ -4,19 +4,19 @@ import { Text as _Text, useThemeUI, get } from 'theme-ui'
 
 // TODO: Import Typography props as well?  Or merge sx object?
 interface TextProps {
-  size?: "sm" | "md" | "lg",
+  kind?: "nav1" | "nav1b" | "nav2" | "body2" | "error1" | "technical1" | "h1" | "h3",
   children: ReactChild
 }
 
-const Text = ({ size, children }: TextProps) => {
+const Text = ({ kind, children }: TextProps) => {
   const context = useThemeUI()
-  const styles = get(context.theme, `text.${size}`)
+  const kinds = get(context.theme, `text.${kind}`)
 
-  return <_Text sx={styles}>{ children }</_Text>
+  return <_Text sx={{ ...kinds }}>{ children }</_Text>
 }
 
 Text.defaultProps = {
-  size: "md"
+  kind: "body2"
 }
 
 export default Text
