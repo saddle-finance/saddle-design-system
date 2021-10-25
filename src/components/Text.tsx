@@ -8,15 +8,11 @@ interface TextProps {
   children: ReactChild
 }
 
-const Text = ({ kind, children }: TextProps) => {
+const Text = ({ kind = "body2", children }: TextProps) => {
   const context = useThemeUI()
   const kinds = get(context.theme, `text.${kind}`)
 
   return <_Text sx={{ ...kinds }}>{ children }</_Text>
-}
-
-Text.defaultProps = {
-  kind: "body2"
 }
 
 export default Text
