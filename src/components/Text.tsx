@@ -2,17 +2,27 @@
 import { ReactChild } from 'react'
 import { Text as _Text, useThemeUI, get } from 'theme-ui'
 
-// TODO: Import Typography props as well?  Or merge sx object?
+// I can't find any type definitions for sx or "Theme-Aware Properties"
+// Is there a good way to pass down arbitrary style values?
 interface TextProps {
   kind?: "nav1" | "nav1b" | "nav2" | "body2" | "error1" | "technical1" | "h1" | "h3",
-  children: ReactChild
+  capitalize?: boolean,
+  children: ReactChild | string | undefined
 }
 
-const Text = ({ kind = "body2", children }: TextProps) => {
+const Text = ({ kind = "body2", children, capitalize }: TextProps) => {
   const context = useThemeUI()
   const kinds = get(context.theme, `text.${kind}`)
 
-  return <_Text sx={{ ...kinds }}>{ children }</_Text>
+  const sx = {
+    ...kinds
+  }
+
+  if (capitalize) {
+    sx.textTransform = "capitalize"
+  }
+
+  return <_Text sx={{ ...sx }}>{ children }</_Text>
 }
 
 export default Text
