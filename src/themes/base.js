@@ -1,6 +1,6 @@
 export default {
-  fontSizes: [12, 16, 20, 24, 100],
-  lineHeights: ['12px', '16px', '20px', '24px', '100px'],
+  fontSizes: [14, 16, 20, 24, 56, 100],
+  lineHeights: ['14px', '16px', '20px', '24px', '100px'],
   fonts: {
     serif: "serif",
     sansSerif: "sans-serif",
