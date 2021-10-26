@@ -2,6 +2,7 @@
 import { ThemeProvider } from 'theme-ui'
 
 import theme from "../src/themes/theme"
+import Global from '../src/components/Global'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -16,6 +17,7 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={theme}>
+      <Global />
       <Story />
     </ThemeProvider>
   ),
