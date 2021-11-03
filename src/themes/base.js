@@ -1,4 +1,5 @@
 export default {
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fontSizes: [14, 16, 20, 24, 56, 100],
   lineHeights: ['14px', '16px', '20px', '24px', '100px'],
   fonts: {
@@ -36,6 +37,6 @@ export default {
     gold1: '#FAEA5D',
     gold2: '#817F48',
     cherry1: '#FB5A5A',
-    cherry2: '#68282F',
+    cherry2: '#68282F'
   }
 }

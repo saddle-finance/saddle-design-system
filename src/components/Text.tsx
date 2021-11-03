@@ -12,7 +12,7 @@ const Text = ({ kind, children }: TextProps) => {
   const context = useThemeUI()
   const kinds = get(context.theme, `text.${kind}`)
 
-  return <_Text sx={{ ...kinds }}>{ children }</_Text>
+  return <_Text sx={{ ...kinds, color: 'text' }}>{ children }</_Text>
 }
 
 Text.defaultProps = {

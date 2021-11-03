@@ -1,5 +1,5 @@
 export default {
-  button: {
+  buttons: {
     // size
     sm: {
       fontSize: 0
