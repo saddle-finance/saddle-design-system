@@ -1,6 +1,9 @@
 import base from '../base'
 
 export default {
-  background: base.colors.indigo3,
-  text: base.colors.sand2
+  // text: base.colors.sand2,
+  backgroundGradient1: '#472DB1', // NOTE: Should this be in base?
+  backgroundGradient2: base.colors.black,
+  backgroundGradient3: '#211050', // NOTE: Should this be in base?
+  backgroundGradient4: base.colors.black,
 }

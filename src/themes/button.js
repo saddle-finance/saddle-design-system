@@ -12,10 +12,10 @@ export default {
     },
     // kind
     primary: {
-      bg: 'primary'
+      bg: 'indigo'
     },
     secondary: {
-      bg: 'secondary'
+      bg: 'seafoam'
     }
   }
 }
