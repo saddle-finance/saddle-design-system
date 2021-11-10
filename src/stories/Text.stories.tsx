@@ -7,11 +7,11 @@ import Text, { TextProps } from "../components/Text"
 export default {
   title: "Text",
   component: Text,
-  parameters: { controls: { include: ['kind']}}
+  parameters: { controls: { include: ['kind', 'capitalize']}}
 } as Meta
 
 const Template: Story<TextProps> = (args) => (
-  <Text {...args}>Hello, World!</Text>
+  <Text {...args}>hello, world!</Text>
 )
 
 export const Default = Template.bind({})
@@ -54,4 +54,9 @@ Error1.args = {
 export const Technical1 = Template.bind({})
 Technical1.args = {
   kind: "technical1"
+}
+
+export const Capitalized = Template.bind({})
+Capitalized.args = {
+  capitalize: true
 }
