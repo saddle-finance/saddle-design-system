@@ -39,12 +39,12 @@ export default {
     h1: {
       fontFamily: 'logotype',
       fontWeight: 'bold',
-      fontSize: 4
+      fontSize: 5
     },
     h3: {
       fontFamily: 'logotype',
       fontWeight: 'bold',
-      fontSize: 3
+      fontSize: 4
     }
   },
   // Primatives

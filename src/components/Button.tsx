@@ -12,8 +12,8 @@ interface ButtonProps {
 
 const Button = ({ size = "md", kind = "primary", children }: ButtonProps) => {
   const context = useThemeUI()
-  const sizes = get(context.theme, `button.${size}`)
-  const kinds = get(context.theme, `button.${kind}`)
+  const sizes = get(context.theme, `buttons.${size}`)
+  const kinds = get(context.theme, `buttons.${kind}`)
 
   return <_Button sx={{ ...sizes, ...kinds }}>{ children }</_Button>
 }

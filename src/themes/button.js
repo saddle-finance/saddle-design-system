@@ -1,5 +1,5 @@
 export default {
-  button: {
+  buttons: {
     // size
     sm: {
       fontSize: 0
@@ -12,10 +12,10 @@ export default {
     },
     // kind
     primary: {
-      bg: 'primary'
+      bg: 'indigo'
     },
     secondary: {
-      bg: 'secondary'
+      bg: 'seafoam'
     }
   }
 }

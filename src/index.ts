@@ -1,4 +1,6 @@
-// import Text from "./components/Text"
-import { Text } from "theme-ui"
+import Provider from "./components/Provider"
+import ModeToggle from "./components/ModeToggle"
+import Text from "./components/Text"
+import Background from "./components/Background"
 
-export { Text }
+export { Provider, ModeToggle, Text, Background }
